@@ -1,10 +1,13 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   return (
-    <div>
-      <h1>Hello Qovunbosh</h1>
-    </div>
+    <>
+      <h1>
+        <div className="container pt-4">Hello, my sleepers 🛌 😴 💤 !</div>
+      </h1>
+    </>
   );
 };
 
