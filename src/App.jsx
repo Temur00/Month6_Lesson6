@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import AddContact from "./components/AddContact";
+// import AddContact from "./components/AddContact";
 import StudentList from "./components/StudentList";
 
 const App = () => {
