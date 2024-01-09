@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Table from "react-bootstrap/Table";
 
 const StudentList = () => {
   const [student, setStudent] = useState({
@@ -12,20 +13,14 @@ const StudentList = () => {
       id: 1,
       firstName: "John",
       lastName: "Doe",
-      number: +998990010099,
+      number: "+998990010099",
     },
     {
       id: 2,
       firstName: "Tom",
       lastName: "Smith",
-      number: +99833003033,
+      number: "+99833003033",
     },
-    // {
-    //   id: 3,
-    //   firstName: "Jane",
-    //   lastName: "Doe",
-    //   number: +99880880088,
-    // },
   ]);
 
   const addToList = (e) => {
@@ -39,9 +34,9 @@ const StudentList = () => {
   };
 
   return (
-    <div className="w-50 mx-auto">
+    <div className="container">
       <hr />
-      <form onSubmit={addToList}>
+      <form onSubmit={addToList} className="w-50 mx-auto">
         <div className=" d-block pt-5">
           <label className="form-label" htmlFor="firstName">
             Firstname
@@ -103,16 +98,56 @@ const StudentList = () => {
         </div>
       </form>
       <br />
-      <div className="mt-5 text-center">Students</div>
-      <hr className="mt-2 " />
+      <div className="mt-5 text-center">Students 🧑‍🎓 👩‍🎓</div>
+      <hr className="mt-2 mb-5" />
       <div>
-        {students.map((st, i) => (
-          <div key={st.id}>
-            <h2 className="mt-5">
-              {i + 1}. {st.firstName} {st.lastName} {st.number}
-            </h2>
-          </div>
-        ))}
+        <Table bordered hover className="container">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Number</th>
+              {/* <th>Action</th> */}
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                {" "}
+                {students.map((st, i) => (
+                  <div key={st.id}>
+                    <h2 className="mt-5">{i + 1}.</h2>
+                  </div>
+                ))}
+              </td>
+              <td>
+                {" "}
+                {students.map((st) => (
+                  <div key={st.id}>
+                    <h2 className="mt-5"> {st.firstName}</h2>
+                  </div>
+                ))}
+              </td>
+              <td>
+                {" "}
+                {students.map((st) => (
+                  <div key={st.id}>
+                    <h2 className="mt-5"> {st.lastName}</h2>
+                  </div>
+                ))}
+              </td>
+              <td>
+                {" "}
+                {students.map((st) => (
+                  <div key={st.id}>
+                    <h2 className="mt-5">{st.number}</h2>
+                  </div>
+                ))}
+              </td>
+            </tr>
+          </tbody>
+        </Table>
       </div>
     </div>
   );

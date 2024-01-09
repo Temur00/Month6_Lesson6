@@ -14,7 +14,7 @@ const App = () => {
     <>
       <h1>
         <div className="container pt-4 text-center pb-3">
-          Registration of Students 🧑‍🎓 👩‍🎓!
+          Registration of Students 📝 !
         </div>
         {/* <AddContact /> */}
         <StudentList />
