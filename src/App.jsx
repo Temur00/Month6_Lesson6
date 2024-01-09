@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import AddContact from "./components/AddContact";
 import StudentList from "./components/StudentList";
 
 const App = () => {
-  const [person, setperson] = useState({
-    firstName: "Tom",
-    lastName: "Jerry",
-    number: "+998990010099",
-  });
+  // const [person, setperson] = useState({
+  //   firstName: "Tom",
+  //   lastName: "Jerry",
+  //   number: "+998990010099",
+  // });
 
   return (
     <>
