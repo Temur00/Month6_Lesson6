@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import AddContact from "./components/AddContact";
+import StudentList from "./components/StudentList";
 
 const App = () => {
   const [person, setperson] = useState({
@@ -15,7 +16,8 @@ const App = () => {
         <div className="container pt-4 text-center pb-3">
           Registration of Students 🧑‍🎓 👩‍🎓!
         </div>
-        <AddContact />
+        {/* <AddContact /> */}
+        <StudentList />
       </h1>
     </>
   );
